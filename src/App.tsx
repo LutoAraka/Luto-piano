@@ -101,6 +101,7 @@ const Note: FunctionComponent<NoteProps> = ({ note, keyboard, white }) => {
     document.addEventListener("keydown", (e) => {
       if (keyboard.includes(e.key)) {
         pressNote();
+        e.preventDefault();
       }
     });
 
